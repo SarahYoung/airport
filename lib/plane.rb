@@ -1,9 +1,13 @@
 class Plane
 
-	# def fly?
-	# 	@fly = true
-	# end
+	def flying?
+		true
+	end
 
+	def landed?
+		true
+	end
+	
 	def can_land?
 		@can_land = true
 	end
