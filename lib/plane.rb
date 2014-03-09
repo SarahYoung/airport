@@ -3,7 +3,7 @@ class Plane
 	# the initialize method is always called when I create a 
 	# new plane class by typing Plane.new
 	def initialize
-		@flying = false
+		can_land
 		# we've initialized the plane to automatically not be flying
 	end
 	# all instance variables begin with @
@@ -23,5 +23,9 @@ class Plane
 		@flying =false
 		# value returns false (which is what we expect)
 		# b/c we've set @flying to false, and if the plane has landed it shouldn't be flying
+	end
+
+	def can_take_off
+		can_fly
 	end
 end
