@@ -4,10 +4,16 @@ require_relative "../lib/plane"
 describe Plane do
 	# this is a specific feature
 	# that we expect to be present
-	it "should not be flying after we create it" do
+	it "should not be able to fly after we create it" do
 		plane = Plane.new # initalizing a new object of plane class	
 		# expect an instance of this class to have
 		# a method "flying?" that should return false
-		expect(plane).not_to(be_flying)
+		expect(plane).not_to(be_able_to_fly)
+	end
+
+	it "should be able to fly after we create it" do
+		plane = Plane.new
+		plane.can_fly
+		expect(plane).to(be_able_to_fly)
 	end
 end
