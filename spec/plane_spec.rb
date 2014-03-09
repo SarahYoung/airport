@@ -34,8 +34,11 @@ describe Plane do
 	end
 
 	it "should be able to take off once landed" do
+		# calling method can_land on plane
 		plane.can_land
+		# calling method can_take_off on plane
 		plane.can_take_off
+		# expecting flying? to be true because the plane is taking off (i.e., flying)
 		expect(plane).to(be_flying)
 	end
 end
