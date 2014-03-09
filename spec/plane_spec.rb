@@ -1,23 +1,13 @@
+# link to the Plane class
 require_relative "../lib/plane"
-
-describe Plane do 
-
-	let (:plane) { Plane.new } 
-
-	it "should know if it's flying" do
-		expect(plane.flying?).to be_true
+# we're describing the functionality of the class Plane
+describe Plane do
+	# this is a specific feature
+	# that we expect to be present
+	it "should not be flying after we create it" do
+		plane = Plane.new # initalizing a new object of plane class	
+		# expect an instance of this class to have
+		# a method "flying?" that should return false
+		expect(plane).not_to(be_flying)
 	end
-
-	it "should know if it has landed" do
-		expect(plane.landed?). to be_true
-	end
-	
-	it "should be able to land" do
-		expect(plane.can_land?).to be_true
-	end
-
-	it "should be able to take off" do
-		expect(plane.can_take_off?).to be_true
-	end
-
 end
