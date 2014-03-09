@@ -2,7 +2,7 @@ require_relative "../lib/plane"
 
 describe Plane do
 	let(:plane) { Plane.new }
-
+	
 	it "should be able to fly" do
 		expect(plane.can_fly).to eq(true)
 	end
