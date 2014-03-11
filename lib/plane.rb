@@ -4,6 +4,10 @@ class Plane
 		@flying = true
 	end
 
+	def flying?
+		@flying
+	end
+	
 	def can_fly
 		@flying
 	end
